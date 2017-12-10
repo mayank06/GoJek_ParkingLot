@@ -47,7 +47,53 @@ public class ParkingLot {
         System.out.println();
     }
     
+    public void park(String regNo, String color) {
+        if (this.MAX_SIZE == 0) {
+            System.out.println("Sorry, parking lot is not created");
+            System.out.println();
+        } else if (this.carMap.size() == this.MAX_SIZE) {
+            System.out.println("Sorry, parking lot is full");
+            System.out.println();
+        } else {
+            Collections.sort(availableSlots);
+            String slot = availableSlots.get(0).toString();
+            Car car = new Car(regNo, color);
+            this.carMap.put(slot, car);
+            this.slotRegMap.put(regNo, slot);
+            if (this.colorRegMap.containsKey(color)) {
+                ArrayList<String> regNoList = this.colorRegMap.get(color);
+                this.colorRegMap.remove(color);
+                regNoList.add(regNo);
+                this.colorRegMap.put(color, regNoList);
+            } else {
+                ArrayList<String> regNoList = new ArrayList<String>();
+                regNoList.add(regNo);
+                this.colorRegMap.put(color, regNoList);
+            }
+            System.out.println("Allocated slot number: " + slot);
+            System.out.println();
+            availableSlots.remove(0);
+        }
+    }
    
+    public void leave(String slot) {
+    	
+    	if (this.MAX_SIZE == 0) {
+            System.out.println("Sorry, parking lot is not created");
+            System.out.println();
+        } else if(this.carMap.size() > 0){
+        	
+        	
+        	
+        	
+        	
+        	System.out.println("Slot no " + slot + "is free");
+        }
+    	else {
+            System.out.println("Parking lot is empty");
+            System.out.println();
+        }
+    }
 	
 	
 	
