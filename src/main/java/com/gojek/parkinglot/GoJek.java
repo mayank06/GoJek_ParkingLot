@@ -32,6 +32,10 @@ public class GoJek {
 				}
 			}
 			break;
+		case 1:
+			// File input/output
+			inputParser.parseFileInput(args[0]);
+			break;
 		default:
 			System.out.println("Invalid input. Usage: java -jar <jar_file_path> <input_file_path>");
 		}
