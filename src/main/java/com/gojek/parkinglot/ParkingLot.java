@@ -83,11 +83,21 @@ public class ParkingLot {
             System.out.println();
         } else if(this.carMap.size() > 0){
         	
-        	
-        	
-        	
-        	
-        	System.out.println("Slot no " + slot + "is free");
+        	Car leavingCar = this.carMap.get(slot);
+        	if(leavingCar != null) {
+        		this.carMap.remove(slot);
+        		this.colorRegMap.remove(leavingCar.regNo);
+        		ArrayList<String> regNoList = this.colorRegMap.get(leavingCar.color);
+        		if(regNoList.contains(leavingCar.regNo)) {
+        			regNoList.remove(leavingCar.regNo);
+        		}
+        		
+        		this.availableSlots.add(Integer.parseInt(slot));
+        		System.out.println("Slot no " + slot + "is free");
+        		System.out.println();
+        	} else {
+        		System.out.println("Parking slot is already empty.");
+        	}
         }
     	else {
             System.out.println("Parking lot is empty");
