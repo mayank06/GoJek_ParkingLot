@@ -1,5 +1,20 @@
 # GoJek_ParkingLot Application
 
+To run the application :
+
+1. mvn clean 
+
+2. mvn install
+
+3. To open interactive mode : 
+sh parking_lot.sh
+
+4. To run with the input file :
+sh parking_lot.sh parking_lot_file_inputs.txt
+
+
+Note : parking_lot.sh is the script that has command to execute the jar.
+
 
 #Problem Statement (Parking Lot)
 
