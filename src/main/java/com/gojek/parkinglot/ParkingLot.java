@@ -43,7 +43,7 @@ public class ParkingLot {
         this.carMap = new HashMap<String, Car>();
         this.slotRegMap = new HashMap<String, String>();
         this.colorRegMap = new HashMap<String, ArrayList<String>>();
-        System.out.println("Created parking slot with " + slots + " slots");
+        System.out.println("Created parking lot with " + slots + " slots");
         System.out.println();
     }
     
@@ -174,5 +174,15 @@ public class ParkingLot {
         }
     }
 	
-	
+	public void getSlotNumberFromRegNo(String regNo) {
+		if (this.MAX_SIZE == 0) {
+            System.out.println("Sorry, parking lot is not created");
+            System.out.println();
+        } else if(slotRegMap.containsKey(regNo)) {
+        	System.out.println(slotRegMap.get(regNo));
+        } else {
+        	System.out.println("Not found");
+            System.out.println();
+        }
+	}
 }

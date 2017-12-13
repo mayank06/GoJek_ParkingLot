@@ -218,5 +218,5 @@ mvn clean install
 
 From the project directory, run this command -
 
-   $ java -jar target/gojek-1.0.jar (Interactive command-line mode)
-   $ java -jar target/gojek-1.0.jar <inputfile> (File input)
+   $ java -jar target/gojek.jar (Interactive command-line mode)
+   $ java -jar target/gojek.jar <inputfile> (File input)

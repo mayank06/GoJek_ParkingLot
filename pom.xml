@@ -4,7 +4,7 @@
 	<groupId>com.gojek.parkinglot</groupId>
 	<artifactId>ParkingLot</artifactId>
 	<version>1.0</version>
-	<name>ParkingLot</name>
+	<name>gojek</name>
 
 	<build>
 		<plugins>
@@ -21,6 +21,7 @@
 							<mainClass>com.gojek.parkinglot.GoJek</mainClass>
 						</manifest>
 					</archive>
+					<finalName>gojek</finalName>
 				</configuration>
 			</plugin>
 		</plugins>
